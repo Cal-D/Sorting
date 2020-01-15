@@ -19,9 +19,8 @@ public class QuickSort {
 		int i = start - 1;
 		int temp;
 		System.out.println("start 값 : " + start + " // end 값: " + end);
-		System.out.println(count++ + "번쨰 pivot 값 : " + pivot);
 		System.out.println("바뀌기전 Array  :" + Arrays.toString(arr));
-		System.out.println("--------------------------------------------");
+		System.out.println(count++ + "번쨰 pivot 값 : " + pivot);
 		
 		// 제일 뒤의 값은 pivot이니 비교에서 빼줘야 한다.
 		for (int j = start; j < end - 1; j++) {
