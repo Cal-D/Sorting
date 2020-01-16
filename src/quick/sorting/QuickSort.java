@@ -16,7 +16,7 @@ public class QuickSort {
 
 	public static int partition(int arr[], int start, int end) {
 		int pivot = arr[end]; // 제일 뒤의 값을 pivot 값으로 잡은 거임.
-		int i = start - 1;
+		int i = start - 1; // pivot 보다 작은값들의 제일 마지막 인덱스 
 		int temp;
 		System.out.println("start 값 : " + start + " // end 값: " + end);
 		System.out.println("바뀌기전 Array  :" + Arrays.toString(arr));
@@ -24,14 +24,14 @@ public class QuickSort {
 		
 		// 제일 뒤의 값은 pivot이니 비교에서 빼줘야 한다.
 		for (int j = start; j < end - 1; j++) {
-			if (arr[j] <= pivot) {
+			if (arr[j] <= pivot) { // pivot 보다 작은 값일 경우,아닐경우는 for문에 의해 자동으로 j 증가 
 				i++;
 				temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
 			}
 		}
-		temp = arr[i + 1];
+		temp = arr[i + 1];  // 실질적으로 pivot을 i+1 자리에 넣어줌. 
 		arr[i + 1] = pivot;
 		arr[end] = temp;
 		System.out.println("바뀐 후 Array : " + Arrays.toString(arr));
