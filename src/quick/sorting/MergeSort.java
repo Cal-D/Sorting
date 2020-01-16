@@ -8,6 +8,9 @@ public class MergeSort {
 	static int count = 1;
 
 	public static void merge(int arr[], int start, int middle, int end) {
+		System.out.println("start 값 : " + start);
+		System.out.println("end 값 : " + end);
+		System.out.println("middle 값 : " + middle);
 		int i = start;
 		int j = middle + 1;
 		int k = start;
