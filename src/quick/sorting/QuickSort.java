@@ -23,7 +23,7 @@ public class QuickSort {
 		System.out.println(count++ + "번쨰 pivot 값 : " + pivot);
 		
 		// 제일 뒤의 값은 pivot이니 비교에서 빼줘야 한다.
-		for (int j = start; j < end - 1; j++) {
+		for (int j = start; j < end; j++) {
 			if (arr[j] <= pivot) { // pivot 보다 작은 값일 경우,아닐경우는 for문에 의해 자동으로 j 증가 
 				i++;
 				temp = arr[i];
@@ -40,9 +40,10 @@ public class QuickSort {
 	}
 
 	public static void main(String[] args) {
-		int[] list = { 58, 8, 28, 3, 18, 6, 33, 20 };
+		int[] list = { 5,4,3,2,1 };
 		int size = list.length - 1;
 		quicksort(list, 0, size);
+		System.out.println(Arrays.toString(list));
 	}
 
 }
